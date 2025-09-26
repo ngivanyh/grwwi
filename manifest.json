@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "grrwi",
+  "version": "0.1",
+
+  "description": "Improves review writing on goodreads by letting you use markdown instead of tags.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.goodreads.com/*"],
+      "js": ["grrw-md.js"]
+    }
+  ]
+}
