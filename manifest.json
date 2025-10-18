@@ -11,8 +11,12 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.goodreads.com/*"],
-      "js": ["grrw-md.js"]
+      "matches": ["*://*.goodreads.com/review/edit/*"],
+      "js": ["grrw-full_page.js"]
+    },
+    {
+      "matches": ["*://*.goodreads.com/review/list/*"],
+      "js": ["grrw-booklist.js"]
     }
   ]
 }
