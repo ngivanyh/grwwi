@@ -7,6 +7,7 @@ if (review_box != null) {
     console.log("review box is found")
 
     let await_action = false
+    const possible_actions = ['u', 'i', 'q', 't', 'b', 'p', 's', 'e']
 
     review_box.addEventListener("input", function(key) {
         console.log(key)
@@ -24,7 +25,9 @@ if (review_box != null) {
             console.log("await action")
             await_action = true
         } else {
-            if (kp in ['u', 'i', 'q', 't', 'b', 'p', 's', 'e'] && await_action === true) {
+            console.log(possible_actions.includes(kp))
+            console.log(await_action === true)
+            if (possible_actions.includes(kp) && await_action === true) {
                 console.log("action")
                 let tag_name = ""
                 switch (kp) {
@@ -41,7 +44,9 @@ if (review_box != null) {
 
                 review_box.value += ">"
                 review_box.selectionEnd++
-                review_box.value += `</&{tag_name}>`
+                review_box.value += `</${tag_name}>`
+
+                await_action = false
             } else {
                 console.log("action cancelled")
                 await_action = false
