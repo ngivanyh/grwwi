@@ -10,6 +10,7 @@ if (review_box != null) {
     const possible_actions = ['u', 'i', 'q', 't', 'b', 'p', 's', 'e']
 
     review_box.addEventListener("input", function(key) {
+        review_box.focus()
         console.log(key)
         let kp = key["data"]
 
@@ -37,13 +38,21 @@ if (review_box != null) {
                         tag_name = "spoiler"; break
                     case 'e':
                         tag_name = "pre"; break
+                    case 't':
+                        tag_name = "s"; break
                     default:
                         tag_name = kp; break
                 }
                 console.log(tag_name)
 
+                if (kp != tag_name) {
+                    console.log("diff")
+                    review_box.value = review_box.value.slice(0, -1)
+                    review_box.value += tag_name
+                }
+
                 review_box.value += ">"
-                review_box.selectionEnd++
+                // review_box.selectionEnd++
                 review_box.value += `</${tag_name}>`
 
                 await_action = false
