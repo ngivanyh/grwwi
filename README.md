@@ -4,7 +4,7 @@
 
 An extension to solve a gripe of mine whenever I'm writing a review on [Goodreads](https://goodreads.com): the non‑autocompleted HTML tags for formatting your review. This extension adds autocomplete for those tags.
 
-In the **textarea** for writing your review, type `<` followed by one of the special letters ([default](#default-character-to-tag-lookup-table)) and the program will complete the tag for you. 
+In the **textarea** for writing your review, type `<` followed by one of the special letters ([default](#default-charactertotag-lookup-table)) and the program will complete the tag for you. 
 
 #### Default Character‑to‑Tag Lookup Table
 

@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "grrwi",
-  "version": "0.2",
+  "version": "0.3",
 
-  "description": "Improves review writing on goodreads (goodreads.com) by completing (auto-closing) the formatting tags.",
+  "description": "Improves general review writing on goodreads (goodreads.com).",
 
   "icons": {
     "48": "icons/icon.png"
@@ -12,11 +12,11 @@
   "content_scripts": [
     {
       "matches": ["*://*.goodreads.com/review/edit/*"],
-      "js": ["grrw-full_page.js"]
+      "js": ["./src/grrw-full_page.js"]
     },
     {
       "matches": ["*://*.goodreads.com/review/list/*"],
-      "js": ["grrw-booklist.js"]
+      "js": ["./src/grrw-booklist.js"]
     }
   ]
 }
