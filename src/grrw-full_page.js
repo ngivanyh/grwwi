@@ -4,10 +4,10 @@ const review_box = document.querySelector(".textBox", ".largeTextBox", ".reviewU
 
 function complete(tag, offset) {
     if (tag === 'img src="" alt=""') {
-        offset += 8
+        offset += 9
         tag_end = ""
     } else if (tag === 'a href=""') {
-        offset += 1
+        offset += 2
         tag_end = "</a>"
     } else {
         tag_end = `</${tag}>`
